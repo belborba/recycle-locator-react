@@ -1,11 +1,19 @@
-import { LocalSearch } from "./LocalSearch";
-import { SearchList } from "./SearchList";
+import { SearchResult } from "./SearchResult";
+import { SearchInput } from "./SearchInput";
+import { useState } from "react";
+import locations from "@/data/location";
 
-export function Container() {
+export function SearchContainer() {
+  const [search, setSearch] = useState("");
+
+  const filteredData = locations.filter((local) =>
+    local.city.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="flex justify-center sm:w-4/5">
-      <SearchList />
-      <LocalSearch />
+      <SearchInput value={search} onChange={setSearch} />
+      <SearchResult data={filteredData} />
     </div>
   );
 }
