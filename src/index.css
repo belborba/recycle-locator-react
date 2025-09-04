@@ -2,6 +2,7 @@
 
 @theme {
   --font-blinker: "Blinker", sans-serif;
+  --color-redpaw: #dd2241;
 }
 
 @layer base {
@@ -11,15 +12,15 @@
 }
 
 h1 {
-  @apply text-4xl;
+  @apply text-3xl sm:text-4xl;
 }
 
 h2 {
-  @apply text-3xl;
+  @apply text-2xl sm:text-3xl;
 }
 
 h3 {
-  @apply text-2xl;
+  @apply font-semibold sm:font-normal sm:text-2xl;
 }
 
 p {

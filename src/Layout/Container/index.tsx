@@ -11,7 +11,7 @@ export function SearchContainer() {
   );
 
   return (
-    <div className="flex justify-center sm:w-4/5">
+    <div className="flex flex-col p-2 sm:flex-row justify-center sm:w-4/5">
       <SearchInput value={search} onChange={setSearch} />
       <SearchResult data={filteredData} />
     </div>

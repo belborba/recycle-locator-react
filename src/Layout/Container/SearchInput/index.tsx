@@ -1,5 +1,5 @@
-import ButtonIcon from "@/assets/icons/button-icon.svg?react";
 import Logo from "@/assets/images/logo.svg?react";
+import { MicrophoneIcon } from "@heroicons/react/24/outline";
 
 interface SearchInputProps {
   value: string;
@@ -8,10 +8,10 @@ interface SearchInputProps {
 
 export function SearchInput({ value, onChange }: SearchInputProps) {
   return (
-    <div className="sm:w-1/2 flex flex-col justify-center gap-8 p-4">
+    <div className="sm:w-1/2 flex flex-col justify-center gap-2 sm:gap-8 p-4">
       <Logo />
       <h1>Encontre o ponto de coleta mais próximo de você</h1>
-      <p className="mt-[-25px]">
+      <p className="sm:mt-[-25px]">
         Nossos pontos de coleta estão espalhados por todo o Distrito Federal.
       </p>
       <div className="w-full max-w-md">
@@ -25,10 +25,10 @@ export function SearchInput({ value, onChange }: SearchInputProps) {
           />
           <button
             type="button"
-            className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-11 h-11 focus:outline-none transition-colors duration-200"
+            className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-11 h-11"
             onClick={() => onChange(value)}
           >
-            <ButtonIcon />
+            <MicrophoneIcon className="w-6 h-6 text-redpaw" />
           </button>
         </div>
       </div>

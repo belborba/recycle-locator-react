@@ -9,7 +9,7 @@ export const SocialMedia = () => {
         rel="noopener noreferrer"
         className="hover:animate-pulse"
       >
-        <IgIcon />
+        <IgIcon className="w-10 h-10" />
       </a>
     </div>
   );
