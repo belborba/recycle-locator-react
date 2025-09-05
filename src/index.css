@@ -2,7 +2,7 @@
 
 @theme {
   --font-blinker: "Blinker", sans-serif;
-  --color-redpaw: #dd2241;
+  --color-redpaw: #d34040;
 }
 
 @layer base {
@@ -26,3 +26,5 @@ h3 {
 p {
   @apply text-base;
 }
+
+@plugin 'tailwind-scrollbar';

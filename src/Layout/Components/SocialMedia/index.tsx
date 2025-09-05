@@ -3,7 +3,7 @@ import Logo from "@/assets/images/logo.svg?react";
 
 export const SocialMedia = () => {
   return (
-    <div className="sticky top-0 w-full h-auto flex justify-between sm:justify-end p-4 bg-neutral-100 sm:bg-transparent">
+    <div className="z-[9999] sticky top-0 w-full h-auto flex justify-between sm:justify-end p-4 bg-neutral-100 sm:bg-transparent">
       <Logo className="block sm:hidden w-[150px]" />
       <a
         href="https://www.instagram.com/patanatampa_df/"

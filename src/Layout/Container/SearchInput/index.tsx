@@ -1,5 +1,5 @@
 import Logo from "@/assets/images/logo.svg?react";
-import { MicrophoneIcon } from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 interface SearchInputProps {
   value: string;
@@ -8,12 +8,12 @@ interface SearchInputProps {
 
 export function SearchInput({ value, onChange }: SearchInputProps) {
   return (
-    <div className="text-center sm:text-left sticky top-21 border-b-neutral-200 border-b sm:border-0 sm:static bg-neutral-100 sm:w-1/2 flex flex-col justify-center gap-2 sm:gap-8 sm:bg-transparent pb-4 px-4">
+    <div className="z-[9999] text-center sm:text-left sticky top-21 border-b-neutral-200 border-b sm:border-0 sm:static bg-neutral-100 sm:w-1/2 flex flex-col justify-center gap-2 sm:gap-6 sm:bg-transparent pb-4 px-4">
       <Logo className="hidden sm:block" />
       <h1 className="sm:w-4/5">
         Encontre o ponto de coleta mais próximo de você
       </h1>
-      <p className="sm:mt-[-25px] text-neutral-500 mb-2 sm:mb-0">
+      <p className="sm:mt-[-20px] text-neutral-500 mb-2 sm:mb-0">
         Disponível apenas no Distrito Federal.
       </p>
       <div className="w-full max-w-md">
@@ -27,10 +27,9 @@ export function SearchInput({ value, onChange }: SearchInputProps) {
           />
           <button
             type="button"
-            className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-11 h-11"
-            onClick={() => onChange(value)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-11 h-11"
           >
-            <MicrophoneIcon className="w-6 h-6 text-redpaw" />
+            <MagnifyingGlassIcon className="w-6 h-6 text-redpaw" />
           </button>
         </div>
       </div>

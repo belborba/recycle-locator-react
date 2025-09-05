@@ -6,8 +6,14 @@ import locations from "@/data/location";
 export function SearchContainer() {
   const [search, setSearch] = useState("");
 
+  const removeAccents = (str: string) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  };
+
   const filteredData = locations.filter((local) =>
-    local.city.toLowerCase().includes(search.toLowerCase())
+    removeAccents(local.city.toLowerCase()).includes(
+      removeAccents(search.toLowerCase())
+    )
   );
 
   return (

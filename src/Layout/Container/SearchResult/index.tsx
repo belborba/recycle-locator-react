@@ -15,20 +15,30 @@ interface SearchResultProps {
 }
 
 export function SearchResult({ data }: SearchResultProps) {
+  function openMap(item: Location) {
+    const query = `${item.localName}, ${item.address}, ${item.city}`;
+    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      query
+    )}`;
+    window.open(url, "_blank");
+  }
+
   return (
     <>
-      <div className="sm:w-1/2 h-4/5 sm:h-[520px] pt-4 px-2 sm:pt-4 sm:border sm:rounded-2xl sm:border-neutral-300">
-        <div className="h-full overflow-y-auto overflow-x-hidden px-2 sm:px-4">
+      <div className=" sm:w-1/2 min-h-[600px] sm:h-[520px] px-2 sm:px-2 sm:py-4 sm:border sm:rounded-2xl sm:border-neutral-300">
+        <div className="h-full overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-neutral-200 scrollbar-track-transparent px-2">
           {data.length === 0 ? (
-            <p>Nenhuma cidade encontrada.</p>
+            <p className="text-center text-neutral-500">
+              Nenhuma cidade encontrada.
+            </p>
           ) : (
             <ul className="flex flex-col gap-4">
               {data.map((item) => (
                 <li
                   key={item.id}
-                  className="flex flex-col gap-2 bg-white rounded-2xl p-4 sm:p-6 shadow-xl"
+                  className="flex relative flex-col gap-2 bg-white rounded-2xl p-4 sm:p-6 shadow-xl"
                 >
-                  <div className="flex justify-between items-center gap-2">
+                  <div className=" flex justify-between items-center gap-2">
                     <h3>{item.localName}</h3>
                     <p>{item.city}</p>
                   </div>
@@ -48,6 +58,12 @@ export function SearchResult({ data }: SearchResultProps) {
                       <p>Aberto ao Público</p>
                     </div>
                   )}
+                  <button
+                    className="absolute bottom-4 right-4 text-[13px] cursor-pointer mt-2 px-4 py-2 bg-redpaw hover:animate-pulse text-white rounded-full"
+                    onClick={() => openMap(item)}
+                  >
+                    Ver no mapa
+                  </button>
                 </li>
               ))}
             </ul>
