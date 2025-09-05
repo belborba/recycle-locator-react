@@ -8,11 +8,13 @@ interface SearchInputProps {
 
 export function SearchInput({ value, onChange }: SearchInputProps) {
   return (
-    <div className="sm:w-1/2 flex flex-col justify-center gap-2 sm:gap-8 p-4">
-      <Logo />
-      <h1>Encontre o ponto de coleta mais próximo de você</h1>
-      <p className="sm:mt-[-25px]">
-        Nossos pontos de coleta estão espalhados por todo o Distrito Federal.
+    <div className="text-center sm:text-left sticky top-21 border-b-neutral-200 border-b sm:border-0 sm:static bg-neutral-100 sm:w-1/2 flex flex-col justify-center gap-2 sm:gap-8 sm:bg-transparent pb-4 px-4">
+      <Logo className="hidden sm:block" />
+      <h1 className="sm:w-4/5">
+        Encontre o ponto de coleta mais próximo de você
+      </h1>
+      <p className="sm:mt-[-25px] text-neutral-500 mb-2 sm:mb-0">
+        Disponível apenas no Distrito Federal.
       </p>
       <div className="w-full max-w-md">
         <div className="relative flex items-center w-full bg-white rounded-full shadow-lg transition-all duration-300 focus-within:shadow-xl">

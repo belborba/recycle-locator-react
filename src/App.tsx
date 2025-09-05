@@ -5,7 +5,7 @@ import { SearchContainer } from "./Layout/Container";
 
 function App() {
   return (
-    <div className="flex min-h-screen flex-col justify-between items-center bg-neutral-100 bg-[url('@/assets/images/bg.svg')] bg-no-repeat bg-cover bg-center">
+    <div className="min-h-screen flex flex-col justify-between items-center bg-neutral-100 sm:bg-[url('@/assets/images/bg.svg')] sm:bg-no-repeat sm:bg-cover sm:bg-center">
       <SocialMedia />
       <SearchContainer />
       <Footer />
