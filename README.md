@@ -11,17 +11,4 @@ It helps users find recycling collection points, supporting a social project tha
 - **Vite** as bundler and dev server  
 - Plugins: `@vitejs/plugin-react`, `tailwindcss`, `vite-plugin-svgr`
 
----
-
-##  Available Scripts
-
-Defined in `package.json`:
-
-```json
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "deploy": "gh-pages -d dist"
-}
 
