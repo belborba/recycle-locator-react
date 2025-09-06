@@ -25,7 +25,7 @@ export function SearchResult({ data }: SearchResultProps) {
 
   return (
     <>
-      <div className=" sm:w-1/2 min-h-[600px] sm:h-[520px] px-2 sm:px-2 sm:py-4 sm:border sm:rounded-2xl sm:border-neutral-300">
+      <div className=" sm:w-1/2 sm:h-[520px] py-4 px-2 sm:px-2 sm:py-4 sm:border sm:rounded-2xl sm:border-neutral-300">
         <div className="h-full overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-neutral-200 scrollbar-track-transparent px-2">
           {data.length === 0 ? (
             <p className="text-center text-neutral-500">
@@ -36,7 +36,7 @@ export function SearchResult({ data }: SearchResultProps) {
               {data.map((item) => (
                 <li
                   key={item.id}
-                  className="flex relative flex-col gap-2 bg-white rounded-2xl p-4 sm:p-6 shadow-xl"
+                  className="flex relative flex-col gap-2 bg-white border border-neutral-300 rounded-2xl p-4 sm:p-6 shadow-xl"
                 >
                   <div className=" flex justify-between items-center gap-2">
                     <h3>{item.localName}</h3>
