@@ -6,7 +6,7 @@ import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr()],
-  base: "/",
+  base: "/recycle-locator-react/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
